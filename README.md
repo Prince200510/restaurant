@@ -1,6 +1,7 @@
 # Restaurant Website
 
 Welcome to the Restaurant Website project! This project is a responsive website designed for a restaurant, showcasing its menu, services, portfolio, and allowing customers to make reservations online.
+To view the website, please visit [here](https://prince200510.github.io/restaurant/).
 
 ## Table of Contents
 - [Key Features](#key-features)
