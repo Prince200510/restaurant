@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Restaurant</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="bookBtn">BOOK A TABLE</button></li>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function(e) {
+                            e.preventDefault();
+                
+                            const target = document.querySelector(this.getAttribute('href'));
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+                        });
+                    });
+                    document.getElementById("bookBtn").addEventListener("click", function() {
+                        const bookatable = document.getElementById("bookatable");
+                        if (bookatable) {
+                            bookatable.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </ul>
+    </div>
+    <div class="parent-home-container">
+        <img src="home3.jpeg">
+        <div class="child-home">
+            <h1>Welcome to Delightful Eats</h1>
+            <p>We are delighted to have you dine with us. At <span class="restaurant-name">Delightful Eats</span>, we strive to provide a memorable culinary experience for every guest.</p>
+        </div>
+    </div>
+    <h1 class="header-1">Our Food</h1>
+    <div class="parent-food">
+        <div class="child-food">
+            <img src="pizza.jpeg">
+            <h1><i class="fas fa-pizza-slice"></i>Pizza</h1>
+            <hr>
+            <h2>Price: &#8377; 250<span> <del>&#8377;350</del></span></h2>
+            <hr>
+            <p>Indulge in flavor-filled perfection at our pizza paradise.</p>
+        </div>
+        <div class="child-food">
+            <img src="burger.jpeg">
+            <h1><i class="fas fa-hamburger"></i>Burger</h1>
+            <hr>
+            <h2>Price: &#8377; 120<span> <del>&#8377;235</del></span></h2>
+            <hr>
+            <p>Experience flavor-packed perfection in every bite at our burger haven.</p>
+        </div>
+        <div class="child-food">
+            <img src="briyani.jpeg">
+            <h1><i class="fas fa-utensils"></i>Briyani</h1>
+            <hr>
+            <h2>Price: &#8377; 410<span> <del>&#8377;615</del></span></h2>
+            <hr>
+            <p>Indulge in aromatic bliss with every spoonful of our signature biryani.</p>
+        </div>
+    </div>
+    <div class="parent-about" id="about">
+        <div class="child-about-image">
+            <img src="about1.jpeg">
+            <img src="about2.jpeg"><br>
+            <img src="about3.jpeg">
+            <img src="about4.jpeg">
+        </div>
+        <div class="child-about-content">
+            <h1>About Us</h1>
+            <h2>Welcome to <i class="fas fa-utensils"></i> Delightful Eats</h2>
+            <p>Welcome to Delightful Eats, founded by owner Prince Maurya. Our passion for exceptional food and warm hospitality ensures a memorable dining experience for all our guests.</p>
+            <p>Experience the essence of Delightfull Eats through our diverse menu offerings and inviting ambiance. Join us and discover what sets us apart - a commitment to quality cuisine and personalized service.</p>
+            <div class="sub-child-about-content">
+                <h3>15<span>Years of Experience</span></h3>
+                <h3>50<span>Popluar Master Chief</span></h3>
+            </div>
+            <button>READ MORE</button>
+        </div>
+    </div>
+    <div class="parent-header-food-menu" id="services">
+        <div class="child-header-food-menu">
+            <h1>Food Menu</h1>
+            <h2>Most Popluar Items</h2>
+            <div class="global-sub-parent-header-food-menu">
+                <div class="sub-parent-header-food-menu">
+                    <div class="sub-child-header-food-menu">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="sub-child-header-food-menu">
+                        <h2>Popular</h2>
+                        <h2>Breakfast</h2>
+                    </div>
+                </div>
+                <div class="sub-parent-header-food-menu">
+                    <div class="sub-child-header-food-menu">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                    <div class="sub-child-header-food-menu">
+                        <h2 style="margin-left: 12px;">Special</h2>
+                        <h2>Launch</h2>
+                    </div>
+                </div>
+                <div class="sub-parent-header-food-menu">
+                    <div class="sub-child-header-food-menu">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="sub-child-header-food-menu">
+                        <h2 style="margin-left: 12px;">Lovely</h2>
+                        <h2>Dinner</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent-food-menu">
+        <div class="sub-parent-food-menu-details">
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="burger.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-hamburger"></i>Veg Cheese Burger<span>&#8377; 120</span></h2><hr>
+                    <p>Savor the goodness of a veggie-filled cheeseburger bite.</p>
+                </div>
+            </div>
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="briyani.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-drumstick-bite"></i>Veg Panner Briyani<span>&#8377; 370</span></h2><hr>
+                    <p>Savor the aromatic flavors of our signature a veg biryani.</p>
+                </div>
+            </div>
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="sandwich.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-bread-slice"></i>Veg Sandwich<span>&#8377; 180</span></h2><hr>
+                    <p>Indulge delightful medley of flavors with our sandwiches.</p>
+                </div>
+            </div>
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="masla_dosa.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-utensils"></i>Masala Dosa<span>&#8377; 175</span></h2><hr>
+                    <p>Experience the crispy perfection our classic masala dosa.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sub-parent-food-menu-details">
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="PunjabiThali.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-th"></i>Punjabi Thali<span>&#8377; 155</span></h2><hr>
+                    <p>Delight in the rich and diverse flavors of a our Punjabi thali.</p>
+                </div>
+            </div>
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="LucknowiFood.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-crown"></i>Lucknowi Food<span>&#8377; 215</span></h2><hr>
+                    <p>Embark on culinary journey with the royal flavors Lucknow.</p>
+                </div>
+            </div>
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="VegPaneerHandi.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-hand-holding"></i>Veg Paneer Handi<span>&#8377; 345</span></h2><hr>
+                    <p>Treat yourself to creamy delight with our veg paneer handi.</p>
+                </div>
+            </div>
+            <div class="child-food-menu">
+                <div class="sub-child-food-menu-image">
+                    <img src="SouthIndianThali.jpeg">
+                </div>
+                <div class="sub-child-food-menu-content">
+                    <h2><i class="fas fa-leaf"></i>South Indian Thali<span>&#8377; 275</span></h2><hr>
+                    <p>Explore the authentic taste South India with our thali spread.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent-header-food-menu">
+        <div class="child-header-food-menu">
+            <h1>Portfolio</h1>
+        </div>
+    </div>
+    <div class="parent-portfolio" id="portfolio">
+        <div class="child-portfolio">
+            <img src="home1.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="home2.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="home3.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="about1.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="sandwich.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="masla_dosa.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="burger.jpeg">
+        </div>
+        <div class="child-portfolio">
+            <img src="pizza.jpeg">
+        </div>
+    </div>
+    <div class="parent-book-table">
+        <div class="child-book-table">
+            <img src="about1.jpeg">
+        </div>
+        <div class="child-book-table" id="bookatable">
+            <h1>Reservation</h1>
+            <h2>Book A Table Online</h2>
+            <div class="sub-child-book-table">
+                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Your Email" required>
+            </div>
+            <div class="sub-child-book-table">
+                <input type="datetime-local" id="datetime" required placeholder="Date & Time">
+                <script>
+                    var now = new Date();
+                    var currentDateTime = now.toISOString().slice(0,16);
+                    document.getElementById('datetime').setAttribute('min', currentDateTime);
+                </script>
+                <select id="options" aria-placeholder="No of People">
+                    <option value="option1">No of People</option>
+                    <option value="option2">1</option>
+                    <option value="option3">2</option>
+                    <option value="option2">3</option>
+                    <option value="option3">4</option>
+                    <option value="option2">5</option>
+                    <option value="option3">6</option>
+                    <option value="option2">7</option>
+                    <option value="option3">8</option>
+                    <option value="option2">9</option>
+                    <option value="option3">10</option>
+                </select>               
+            </div>
+            <textarea type="text" placeholder="Special Request"></textarea> 
+            <button>BOOK NOW</button>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="footer1">
+          <h1><span><i class="fas fa-crown footer-icons"></i></span>Delightful <span>Eats</span></h1>
+          <p>The Delightful Eats hotel restaurant epitomizes luxury and sophistication, offering an unforgettable experience in the heart of [India]. Our opulent accommodations, impeccable service, and world-class amenities ensure a truly regal retreat for every guest. Whether you're here for business or leisure, immerse yourself in the timeless blend of tradition and modernity that defines our hotel. Welcome to Delightful Eats, where every moment is infused with grandeur and grace.</p>
+          <div class="footer-social-media-icon">
+            <h2><i class="fab fa-facebook-f"></i></h2>
+            <h2><a href="https://instagram.com/princemaurya_10?igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i class="fab fa-instagram"></i></a></h2>
+            <h2><i class="fab fa-twitter"></i></h2>
+            <h2><i class="fab fa-youtube"></i></h2>
+          </div>
+        </div>
+        <div class="footer2">
+          <h1>Links</h1>
+          <p>About Us</p>
+          <p>Contact Us</p>
+          <p>Services</p>
+          <p>Booking Now</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div class="footer3">
+          <h1>Contact Us</h1>
+          <p>Have questions or need assistance? Contact our team for inquiries and reservations.</p>
+          <p title='To locate us, click to open Google Maps for directions.'><i class="fas fa-map-marker-alt"></i> India, Maharashtra, Mumbai - 400084</p>
+          <p title='To contact us, click on given number'><i class="fas fa-phone-alt"></i> 9987742369 / 9930521814</p>
+          <p title='To mail us, click on mail id'><i class="fas fa-envelope"></i> princemaurya8879@gmail.com</p>
+        </div>
+      </footer>
+      <div class="main-footer">
+        <h2>&copy; All rights reserved - Delightful Eats</h2>
+      </div>      
+</body>
+</html>
